@@ -3,13 +3,16 @@
 */
 
 .book-list {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	flex-wrap: wrap;
-	min-height: calc(100vh - 96px);
-	padding-top: 20px;
-	margin-top: 76px;
+	min-height: calc(100vh - 37px);
+
+	.book-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		padding-top: 20px;
+		margin-top: 76px;
+	}
 
 	.book {
 		margin-bottom: 20px;

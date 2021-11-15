@@ -24,7 +24,11 @@ const Home = (): JSX.Element => {
 			description="Parcourez la liste des livres d'Henri Potier à prix abordables."
 			active={0}
 		>
-			<div className="container book-list">{mappedBooks}</div>
+			<div className="container book-list">
+				<div className="book-container">
+					{mappedBooks}
+				</div>
+			</div>
 		</Page>
 	);
 };
