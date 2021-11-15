@@ -28,7 +28,7 @@
 [ ] Add responsive to footer
 [x] Add loading spinner component
 [ ] Add image lazy loading
-[ ] Setup axios and webservices
+[x] Setup axios and webservices
 [ ] Add Redux store
 [ ] Feature add item to cart
 [ ] Feature remove item from cart
