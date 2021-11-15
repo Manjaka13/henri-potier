@@ -19,7 +19,7 @@ const Heading: React.FC<IHeadingProps> = ({
 	<Head>
 		<meta charSet="utf-8" />
 		<title>{title}</title>
-		<link rel="shortcut icon" href={`public/images/favicon.ico`} />
+		<link rel="shortcut icon" href={`public/favicon.ico`} />
 		<meta name="theme-color" content={data.theme_hex} />
 		<meta name="robots" content="index, follow" />
 		<meta

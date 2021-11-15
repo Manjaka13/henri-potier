@@ -20,7 +20,7 @@
 [x] Add cart item component
 [x] Create page layout component
 [x] Warning: rename  http-equiv to httpEquiv
-[ ] Setup book interface on all components that uses books
+[x] Setup book interface on all components that uses books
 [ ] Search feature
 [ ] Create mobile menu
 [ ] Adjust navbar responsive
