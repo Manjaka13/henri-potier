@@ -6,21 +6,10 @@ import { v4 as uuidv4 } from "uuid";
 import { IBook } from "helpers/interface";
 
 /*
-	Button component
-	----------------
-	@className: give custom className to the component
-	@type: button color (ok|danger)
-	@children: button content
-	@onClick: click callback
+	Cart component
 */
 
-const Cart: React.FC<IButtonProps> = ({
-	className = "",
-	type = "",
-	title = "",
-	children,
-	onClick,
-}): JSX.Element => {
+const Cart = (): JSX.Element => {
 	// Map cart content list
 	const mappedCart: Array<JSX.Element> = books.map((item: IBook) => {
 		const key: string = uuidv4();
@@ -50,6 +39,6 @@ const Cart: React.FC<IButtonProps> = ({
 			</div>
 		</div>
 	);
-}
+};
 
 export default Cart;

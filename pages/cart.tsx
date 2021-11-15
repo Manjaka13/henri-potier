@@ -13,6 +13,6 @@ const Cart = (): JSX.Element => (
 	>
 		<Cart />
 	</Page>
-)
+);
 
 export default Cart;
