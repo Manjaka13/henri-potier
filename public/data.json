@@ -1,0 +1,23 @@
+{
+	"name": "Henri Potier",
+	"logo": "henri-potier.png",
+	"theme": "rgb(57, 57, 251)",
+	"theme_hex": "#3939FB",
+	"sections": [
+		{
+			"link": "/",
+			"title": "Parcourir notre liste de produits.",
+			"name": "Nos livres"
+		},
+		{
+			"link": "/cart",
+			"title": "Liste des produits ajoutés au panier.",
+			"name": "Votre panier"
+		}
+	],
+	"author": {
+		"name": "Manjaka13",
+		"email": "manjaka.rajaonson@gmail.com",
+		"linkedin": "https://linkedin.com/in/harijaona-rajaonson/",
+	}
+}

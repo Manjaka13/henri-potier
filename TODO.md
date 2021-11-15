@@ -10,12 +10,12 @@
 [x] Update readme
 [x] Install Redux
 [x] Create button component
-[ ] Create heading component
-[ ] Add navbar
-[ ] Add search bar
-[ ] Add footer
-[ ] Create book card
-[ ] Add cart component
-[ ] Add cart page
-[ ] Add cart item component
-[ ] Create page layout component
+[x] Create heading component
+[x] Add navbar
+[x] Add search bar
+[x] Add footer
+[x] Create book card
+[x] Add cart component
+[x] Add cart page
+[x] Add cart item component
+[x] Create page layout component

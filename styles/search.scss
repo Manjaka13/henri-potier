@@ -1,0 +1,22 @@
+/*
+    Searchbar styles
+*/
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    &__input {
+	    border-radius: 5px 0 0 5px;
+	    border: 1px white solid;
+	    padding: 10px 20px 10px 20px;
+	}
+
+	&__submit {
+	    border-radius: 0 5px 5px 0;
+	    &:hover {
+	    	box-shadow: none;
+	    }
+	}
+}

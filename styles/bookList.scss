@@ -1,0 +1,61 @@
+/*
+    Display list of books
+*/
+
+.book-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 96px);
+    padding-top: 20px;
+    margin-top: 76px;
+
+    .book {
+        margin-bottom: 20px;
+        width: calc(50% - 10px);
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .book {
+            height: 200px;
+        }
+
+        .book__cover {
+            width: 136px;
+        }
+
+        .book__info {
+            width: calc(100% - 136px);
+        }
+
+        .synopsis {
+            -webkit-line-clamp: 2;
+            max-height: 22px;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .book-list {
+            flex-direction: column;
+        }
+        
+        .book {
+            width: 100%;
+            height: 280px;
+        }
+
+        .book__cover {
+            width: 200px;
+        }
+
+        .book__info {
+            width: calc(100% - 200px);
+        }
+
+        .synopsis {
+            -webkit-line-clamp: 6;
+            max-height: 93px;
+        }
+    }
+}
