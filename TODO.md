@@ -9,7 +9,7 @@
 [x] Add next base shortcut path
 [x] Update readme
 [x] Install Redux
-[ ] Create button component
+[x] Create button component
 [ ] Create heading component
 [ ] Add navbar
 [ ] Add search bar

@@ -1,5 +1,5 @@
 import React from "react";
-import "styles/globals.scss";
+import "styles/index.scss";
 import { IHenriPotierProps } from "helpers/interface";
 
 const HenriPotier: React.FC<IHenriPotierProps> = ({
