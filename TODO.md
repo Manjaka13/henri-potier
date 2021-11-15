@@ -51,5 +51,5 @@
 [ ] Add better comments
 [ ] Add fontawesome icons
 [ ] Fix cart item arragement list
-[ ] Fix navbar z-index
-[ ] Bug cart page not displaying
+[x] Fix navbar z-index
+[x] Bug cart page not displaying
