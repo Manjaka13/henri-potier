@@ -1,15 +1,18 @@
 import React from "react";
 import Page from "components/Page";
 import Book from "components/Book";
-import books from "helpers/book-mocky.json";
+// import books from "helpers/book-mocky.json";
 import { v4 as uuidv4 } from "uuid";
 import { IBook } from "helpers/interface";
+import useBooks from "hooks/useBooks";
 
 /*
 	Home page
 */
 
 const Home = (): JSX.Element => {
+	const books = useBooks();
+
 	// Map book list
 	const mappedBooks: Array<JSX.Element> = books.map((item: IBook) => (
 		<Book book={item} key={uuidv4()} />
