@@ -1,5 +1,5 @@
 import React from "react";
-import {IButtonProps} from "helpers/interface";
+import { IButtonProps } from "helpers/interface";
 
 /*
 	Button component
@@ -20,7 +20,7 @@ const Button: React.FC<IButtonProps> = ({
 	<button
 		className={`btn ${type && "btn--" + type} ${className}`}
 		title={title}
-		onClick={onClick}
+		onClick={() => onClick()}
 	>
 		{children}
 	</button>

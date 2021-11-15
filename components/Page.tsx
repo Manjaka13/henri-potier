@@ -2,7 +2,7 @@ import React from "react";
 import Heading from "components/Heading";
 import Navigation from "components/Navigation";
 import Footer from "components/Footer";
-import {IPageProps} from "helpers/interface";
+import { IPageProps } from "helpers/interface";
 
 /*
 	Page component
@@ -18,7 +18,7 @@ const Page: React.FC<IPageProps> = ({
 	image,
 	description,
 	children,
-	active
+	active,
 }): JSX.Element => (
 	<>
 		<Heading title={title} image={image}>

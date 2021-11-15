@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import {IHeadingProps} from "helpers/interfaces";
-import data from "public/data";
+import { IHeadingProps } from "helpers/interface";
+import data from "public/data.json";
 
 /*
 	Heading of each page
@@ -14,16 +14,19 @@ import data from "public/data";
 const Heading: React.FC<IHeadingProps> = ({
 	title = "",
 	image,
-	children = ""
+	children = "",
 }): JSX.Element => (
 	<Head>
 		<meta charSet="utf-8" />
 		<title>{title}</title>
-		<link rel="shortcut icon"href={`public/images/favicon.ico`} />
+		<link rel="shortcut icon" href={`public/images/favicon.ico`} />
 		<meta name="theme-color" content={data.theme_hex} />
 		<meta name="robots" content="index, follow" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-		<meta http-equiv="language" content="fr"/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+		/>
+		<meta httpEquiv="language" content="fr" />
 		<meta name="author" content={`${data.author.name} <${data.author.email}>`} />
 		<meta name="description" content={children} />
 		<meta name="generator" content="NextJS" />
