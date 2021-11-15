@@ -20,7 +20,9 @@ const Button: React.FC<IButtonProps> = ({
 	<button
 		className={`btn ${type && "btn--" + type} ${className}`}
 		title={title}
-		onClick={() => onClick()}
+		onClick={() => {
+			typeof onClick === "function" ? onClick() : null;
+		}}
 	>
 		{children}
 	</button>

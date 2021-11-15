@@ -14,7 +14,7 @@ export interface IButtonProps {
 	type?: string;
 	title?: string;
 	children?: string;
-	onClick?: any;
+	onClick?: unknown;
 }
 
 // Heading component props

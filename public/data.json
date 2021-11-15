@@ -19,5 +19,6 @@
 		"name": "Manjaka13",
 		"email": "manjaka.rajaonson@gmail.com",
 		"linkedin": "https://linkedin.com/in/harijaona-rajaonson/"
-	}
+	},
+	"baseUrl": "api/"
 }
