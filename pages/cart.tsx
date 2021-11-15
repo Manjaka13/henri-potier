@@ -1,5 +1,6 @@
 import React from "react";
 import Page from "components/Page";
+import CartList from "components/CartList";
 
 /*
 	Cart page
@@ -11,7 +12,7 @@ const Cart = (): JSX.Element => (
 		description="Liste du contenu de votre panier avec les réductions."
 		active={1}
 	>
-		<Cart />
+		<CartList />
 	</Page>
 );
 

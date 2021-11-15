@@ -1,15 +1,15 @@
 import React from "react";
 import Button from "components/Button";
 import CartItem from "components/CartItem";
-import books from "helpers/book-mocky.json";
+import books from "public/book-mocky.json";
 import { v4 as uuidv4 } from "uuid";
 import { IBook } from "helpers/interface";
 
 /*
-	Cart component
+	Lists cart content
 */
 
-const Cart = (): JSX.Element => {
+const CartList = (): JSX.Element => {
 	// Map cart content list
 	const mappedCart: Array<JSX.Element> = books.map((item: IBook) => {
 		const key: string = uuidv4();
@@ -41,4 +41,4 @@ const Cart = (): JSX.Element => {
 	);
 };
 
-export default Cart;
+export default CartList;

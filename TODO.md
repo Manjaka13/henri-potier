@@ -32,7 +32,7 @@
 [ ] Add Redux store
 [ ] Feature add item to cart
 [ ] Feature remove item from cart
-[ ] Add badges number to navbar links
+[x] Add badges number to navbar links
 [ ] Display full synopsis and book data on click to info button
 [ ] Create a hook for getting book list
 [ ] Create a hook for getting book details in cart
