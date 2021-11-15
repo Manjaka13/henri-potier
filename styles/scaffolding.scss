@@ -1,0 +1,55 @@
+/*
+    Global styles
+*/
+
+html, body {
+    font-family: sans-serif;
+    background: rgb(245, 245, 245);
+}
+
+html, body, h1, h2, h3, p, ul, li, figure {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: rgb(50, 50, 50);
+}
+
+p, a, button, li, input {
+    font-size: 11pt;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    width: 1400px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1700px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .container {
+        width: 90%;
+    }
+}
+
+.prg {
+    padding: 10px;
+    text-align: justify;
+    color: rgb(80, 80, 80);
+}
