@@ -19,3 +19,36 @@
 [x] Add cart page
 [x] Add cart item component
 [x] Create page layout component
+[ ] Warning: rename  http-equiv to httpEquiv
+[ ] Setup book interface on all components that uses books
+[ ] Search feature
+[ ] Create mobile menu
+[ ] Adjust navbar responsive
+[ ] Adjust books/bookList responsive
+[ ] Add responsive to footer
+[ ] Add loading spinner component
+[ ] Add image lazy loading
+[ ] Setup axios and webservices
+[ ] Add Redux store
+[ ] Feature add item to cart
+[ ] Feature remove item from cart
+[ ] Add badges number to navbar links
+[ ] Display full synopsis and book data on click to info button
+[ ] Create a hook for getting book list
+[ ] Create a hook for getting book details in cart
+[ ] List cart items in cart page
+[ ] Display cart total
+[ ] Add fake payment feature
+[ ] Flush cart feature
+[ ] Bug: Y-axis problem for book card list
+[ ] Unit testing on each component
+[ ] End to end testing
+[ ] Add better reusable SASS mixins
+[ ] Edit readme to be best looking as possible
+[ ] Review overall code for performance
+[ ] Track warnings on final code
+[ ] Check if final code respects SOLID, KISS, YAGNI principles
+[ ] Add better comments
+[ ] Add fontawesome icons
+[ ] Fix cart item arragement list
+[ ] Fix navbar z-index
