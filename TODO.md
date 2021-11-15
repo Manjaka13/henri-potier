@@ -8,3 +8,4 @@
 [x] Create directory structure
 [ ] Add next base shortcut path
 [ ] Update readme
+[x] Install Redux
