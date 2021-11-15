@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Search from "components/Search";
+import Badge from "components/Badge";
 import data from "public/data.json";
 import { INavigationProps } from "helpers/interface";
 import { v4 as uuidv4 } from "uuid";
@@ -15,6 +16,7 @@ const Navigation: React.FC<INavigationProps> = ({
 	// Map section links
 	const mappedSections = data.sections.map((item, key) => (
 		<li className={`item ${key === active && "item--active"}`} key={uuidv4()}>
+			<Badge number={key} />
 			<Link href={item.link} passHref>
 				<a className="link" title={item.title}>
 					{item.name}

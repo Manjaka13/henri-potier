@@ -58,3 +58,8 @@ export interface ICartItemProps {
 export interface IBookProps {
 	book: IBook;
 }
+
+// Badge props
+export interface IBadge {
+	number?: number;
+}
