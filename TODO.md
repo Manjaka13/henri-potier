@@ -26,7 +26,7 @@
 [ ] Adjust navbar responsive
 [ ] Adjust books/bookList responsive
 [ ] Add responsive to footer
-[ ] Add loading spinner component
+[x] Add loading spinner component
 [ ] Add image lazy loading
 [ ] Setup axios and webservices
 [ ] Add Redux store
@@ -52,3 +52,4 @@
 [ ] Add fontawesome icons
 [ ] Fix cart item arragement list
 [ ] Fix navbar z-index
+[ ] Bug cart page not displaying
