@@ -4,7 +4,7 @@ import Button from "components/Button";
 import CartItem from "components/CartItem";
 import books from "helpers/book-mocky.json";
 import { v4 as uuidv4 } from "uuid";
-import {IBook} from "helpers/interface";
+import { IBook } from "helpers/interface";
 
 /*
 	Cart page
@@ -14,9 +14,7 @@ const Cart = (): JSX.Element => {
 	// Map cart content list
 	const mappedCart: Array<JSX.Element> = books.map((item: IBook) => {
 		const key: string = uuidv4();
-		return (
-			<CartItem book={item} key={key} id={key} />
-		);
+		return <CartItem book={item} key={key} id={key} />;
 	});
 
 	return (
@@ -36,19 +34,18 @@ const Cart = (): JSX.Element => {
 					</div>
 
 					{/*<!-- Shopping cart content -->*/}
-					<ul className="cart__list">
-						{mappedCart}
-					</ul>
+					<ul className="cart__list">{mappedCart}</ul>
 
 					{/*<!-- Total due -->*/}
 					<div className="cart__separator"></div>
 					<p className="cart__total">
-						<span className="text">Net à payer:</span> <span className="price">45 $</span>
+						<span className="text">Net à payer:</span>{" "}
+						<span className="price">45 $</span>
 					</p>
 				</div>
 			</div>
 		</Page>
 	);
-}
+};
 
 export default Cart;
