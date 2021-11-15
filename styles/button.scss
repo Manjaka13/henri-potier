@@ -3,60 +3,60 @@
 */
 
 .btn {
-    border: none;
-    outline: none;
-    transition: all 0.2s ease-out;
-    font-size: 12pt;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    background: $color-1;
-    color: white;
-    text-shadow: 0px 1px 2Px black;
-    
-    &:hover {
-        box-shadow: 0px 0px 10px rgb(200, 200, 200);
-        background:  lighten($color-1, 8%);
-    }
+	border: none;
+	outline: none;
+	transition: all 0.2s ease-out;
+	font-size: 12pt;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	background: $color-1;
+	color: white;
+	text-shadow: 0px 1px 2px black;
 
-    &:active {
-        box-shadow: 0px 0px 5px rgb(50, 50, 50);
-        background:  darken($color-1, 8%);
-    }
+	&:hover {
+		box-shadow: 0px 0px 10px rgb(200, 200, 200);
+		background: lighten($color-1, 8%);
+	}
 
-    // Disabled button
+	&:active {
+		box-shadow: 0px 0px 5px rgb(50, 50, 50);
+		background: darken($color-1, 8%);
+	}
 
-    &--disabled {
-        pointer-events: none;
-        color: rgb(180, 180, 180);
-        text-shadow: none;
-    }
+	// Disabled button
 
-    // Blue button
+	&--disabled {
+		pointer-events: none;
+		color: rgb(180, 180, 180);
+		text-shadow: none;
+	}
 
-    &--ok {
-        background: $color-3;
-    }
+	// Blue button
 
-    &--ok:hover {
-        background: lighten($color-3, 8%);
-    }
+	&--ok {
+		background: $color-3;
+	}
 
-    &--ok:active {
-        background: darken($color-3, 8%);
-    }
+	&--ok:hover {
+		background: lighten($color-3, 8%);
+	}
 
-    // Red button
+	&--ok:active {
+		background: darken($color-3, 8%);
+	}
 
-    &--danger {
-        background: $color-4;
-    }
+	// Red button
 
-    &--danger:hover {
-        background: lighten($color-4, 8%);
-    }
+	&--danger {
+		background: $color-4;
+	}
 
-    &--danger:active {
-        background: darken($color-4, 8%);
-    }
+	&--danger:hover {
+		background: lighten($color-4, 8%);
+	}
+
+	&--danger:active {
+		background: darken($color-4, 8%);
+	}
 }

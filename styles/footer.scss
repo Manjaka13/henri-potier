@@ -3,29 +3,29 @@
 */
 
 .footer {
-    width: 100%;
-    background: $color-1;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+	width: 100%;
+	background: $color-1;
+	box-shadow: 0px 0px 10px rgb(100, 100, 100);
 
-    &__container {
-        display: flex;
-        justify-content: center;
-    }
+	&__container {
+		display: flex;
+		justify-content: center;
+	}
 
-    &__left,
-    &__right {
-        padding: 10px;
-        color: white;
-    }
+	&__left,
+	&__right {
+		padding: 10px;
+		color: white;
+	}
 
-    .link {
-        color: $color-3;
-        font-weight: bold;
-        &:hover {
-            color: lighten($color-3, 8%);
-        }
-        &:active {
-            color: darken($color-3, 8%);
-        }
-    }
+	.link {
+		color: $color-3;
+		font-weight: bold;
+		&:hover {
+			color: lighten($color-3, 8%);
+		}
+		&:active {
+			color: darken($color-3, 8%);
+		}
+	}
 }
