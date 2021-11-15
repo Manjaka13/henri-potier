@@ -3,8 +3,8 @@
 [ ] Setup base project
 [x] Install husky
 [x] Run TSC/ESLint/Prettier with husky pre-commit
-[ ] Setup typescript
+[x] Setup typescript
 [ ] Setup SASS
-[ ] Create directory structure
+[x] Create directory structure
 [ ] Add next base shortcut path
 [ ] Update readme
