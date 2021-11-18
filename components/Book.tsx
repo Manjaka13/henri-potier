@@ -23,7 +23,7 @@ const Book: React.FC<IBookProps> = ({
 }): JSX.Element => (
 	<div className="book">
 		<figure className="book__cover">
-			<img className="image" src="cover.jpg" alt={`Cover ${book.title}`} />
+			<img className="image" src={book.cover} alt={`Cover ${book.title}`} />
 		</figure>
 		<div className="book__info">
 			<div className="top">

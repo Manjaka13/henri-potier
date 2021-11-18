@@ -3,6 +3,7 @@
 */
 
 .book-list {
+	@include flexrow(center, center);
 	min-height: calc(100vh - 37px);
 
 	.book-container {

@@ -1,10 +1,11 @@
 import React from "react";
 import Page from "components/Page";
 import Book from "components/Book";
-import books from "public/book-mocky.json";
+import Spinner from "components/Spinner";
+// import books from "public/book-mocky.json";
 import { v4 as uuidv4 } from "uuid";
 import { IBook } from "helpers/interface";
-// import useBooks from "hooks/useBooks";
+import useBooks from "hooks/useBooks";
 import { useSelector, useDispatch } from "react-redux";
 import { addCartItem } from "redux/actions";
 
@@ -13,7 +14,7 @@ import { addCartItem } from "redux/actions";
 */
 
 const Home = (): JSX.Element => {
-	// const books = useBooks();
+	const books = useBooks();
 	const cartIsbn = useSelector((list: Array<IBook>) =>
 		list.map((item) => item.isbn)
 	);
@@ -42,7 +43,13 @@ const Home = (): JSX.Element => {
 			active={0}
 		>
 			<div className="container book-list">
-				<div className="book-container">{mappedBooks}</div>
+				<div className="book-container">
+					{
+						books.length > 0 ?
+						mappedBooks :
+						(<Spinner />)
+					}
+				</div>
 			</div>
 		</Page>
 	);
