@@ -1,0 +1,84 @@
+/*
+	Menu styles
+*/
+
+.menu {
+	@include flexcol(center, initial);
+	position: fixed;
+	top: 76px;
+	left: 0;
+	z-index: 11;
+	width: 100%;
+	background: rgb(20, 20, 20);
+	box-shadow: 0px 0px 10px rgb(100, 100, 100);
+	padding-top: 20px;
+	height: 0;
+	opacity: 0;
+	@include transition(0.1s);
+
+	&--opened {
+		opacity: 1;
+		pointer-events: auto;
+		height: auto;
+	}
+
+	.search-box {
+		@include flexrow(center, initial);
+		width: 100%;
+	}
+
+	.item {
+		text-align: center;
+		padding: 10px 0 10px 0;
+		position: relative;
+		cursor: pointer;
+		margin: 10px 0 10px 0;
+		&:last-child {
+			margin: 0;
+		}
+	}
+	.item:hover .link,
+	.item--active .link {
+		color: white;
+		text-shadow: 0px 1px 2px black;
+	}
+	.item:hover .underline {
+		width: 100%;
+	}
+	.item--active .underline {
+		width: 10%;
+	}
+	.link {
+		display: block;
+		padding: 10px 20px 10px 20px;
+		font-weight: bold;
+		color: rgb(180, 180, 180);
+		font-size: 13pt;
+	}
+	.underline {
+		width: 0;
+		height: 3px;
+		box-shadow: 0px 1px 3px black;
+		background: white;
+		@include transition;
+		margin: auto;
+	}
+}
+
+.menu-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.6);
+	opacity: 1;
+	pointer-events: auto;
+	@include transition;
+
+	&--closed {
+		opacity: 0;
+		pointer-events: none;
+	}
+}

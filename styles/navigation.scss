@@ -11,7 +11,7 @@
 	left: 0;
 	background: $color-1;
 	z-index: 13;
-	box-shadow: 0px 0px 10px rgb(100, 100, 100);
+	box-shadow: 0px 0px 10px rgba(40, 40 , 40, 0.7);
 
 	&__container {
 		@include flexrow(space-between, center);
@@ -23,6 +23,17 @@
 			color: white;
 			font-size: 25pt;
 			text-shadow: 0px 1px 2px black;
+			.real {
+				@include responsive(330px) {
+					display: none;
+				}
+			}
+			.short {
+				display: none;
+				@include responsive(330px) {
+					display: block;
+				}
+			}
 		}
 		.square {
 			width: 10px;
@@ -80,6 +91,7 @@
 	}
 
 	&__trigger {
+		position: relative;
 		display: none;
 		width: 50px;
 		height: 50px;
@@ -101,6 +113,14 @@
 		}
 		@include responsive(1070px) {
 			@include flexrow(center, center);
+		}
+		@include responsive(450px) {
+			width: 40px;
+			height: 40px;
+			font-size: 18pt;
+		}
+		.badge {
+			color: initial;
 		}
 	}
 }

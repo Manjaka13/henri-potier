@@ -3,12 +3,8 @@
 */
 
 .search {
-	@include flexrow(initial, center);
+	@include flexrow(initial, initial);
 	margin-right: 20px;
-
-	@include responsive(1070px) {
-		display: none;
-	}
 
 	&__input {
 		border-radius: 5px 0 0 5px;
@@ -20,6 +16,38 @@
 		border-radius: 0 5px 5px 0;
 		&:hover {
 			box-shadow: none;
+		}
+		@include responsive(600px) {
+			display: none;
+		}
+		&--short {
+			display: none;
+			@include responsive(600px) {
+				display: inline-block;
+			}
+		}
+	}
+
+	&__button {
+		width: 100%;
+	}
+}
+
+.navigation {
+	.search {
+		@include responsive(1070px) {
+			display: none;
+		}
+	}
+}
+
+.menu {
+	.search {
+		width: calc(100% - 40px);
+		margin-right: 0;
+
+		&__input {
+			flex: 1;
 		}
 	}
 }

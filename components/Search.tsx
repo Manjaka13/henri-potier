@@ -19,6 +19,7 @@ const Search = (): JSX.Element => (
 		<Button className="search__submit" type="ok" icon={faSearch}>
 			Rechercher
 		</Button>
+		<Button className="search__submit search__submit--short" type="ok" icon={faSearch} />
 	</form>
 );
 

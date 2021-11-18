@@ -79,3 +79,10 @@ export interface IReduxAction {
 export interface ICartListProps {
 	books: Array<IBook>;
 }
+
+// Menu props
+export interface IMenuProps {
+	opened: boolean;
+	requestClose: () => void;
+	mappedSections: Array<JSX.Element>;
+}
