@@ -14,6 +14,7 @@
 	padding-top: 20px;
 	height: 0;
 	opacity: 0;
+	pointer-events: none;
 	@include transition(0.1s);
 
 	&--opened {

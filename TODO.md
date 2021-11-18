@@ -35,10 +35,9 @@
 [x] Add badges number to navbar links
 [ ] Display full synopsis and book data on click to info button
 [x] Create a hook for getting book list
-[ ] Create a hook for getting book details in cart
+[x] Create a hook for getting book details in cart
 [x] List cart items in cart page
 [ ] Display cart total
-[ ] Add fake payment feature
 [x] Flush cart feature
 [ ] Bug: Y-axis problem for book card list
 [ ] Unit testing on each component
@@ -56,3 +55,5 @@
 [x] Redirect back to home when cart empty in cart page
 [x] Correct badge size
 [x] Cart responsive
+[x] Show loading spinner for waiting
+[x] Fix Menu z-index
