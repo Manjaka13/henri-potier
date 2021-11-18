@@ -24,7 +24,7 @@
 [ ] Search feature
 [x] Create mobile menu
 [x] Adjust navbar responsive
-[ ] Adjust books/bookList responsive
+[x] Adjust books/bookList responsive
 [x] Add responsive to footer
 [x] Add loading spinner component
 [ ] Add image lazy loading

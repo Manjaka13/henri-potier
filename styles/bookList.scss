@@ -21,7 +21,6 @@
 		.book {
 			height: 200px;
 		}
-
 		.book__cover {
 			width: 136px;
 		}
@@ -29,7 +28,6 @@
 		.book__info {
 			width: calc(100% - 136px);
 		}
-
 		.synopsis {
 			-webkit-line-clamp: 2;
 			max-height: 22px;
@@ -40,16 +38,13 @@
 		.book-list {
 			@include flexcol(space-between, flex-start);
 		}
-
 		.book {
 			width: 100%;
 			height: 280px;
 		}
-
 		.book__cover {
 			width: 200px;
 		}
-
 		.book__info {
 			width: calc(100% - 200px);
 		}
@@ -57,6 +52,45 @@
 		.synopsis {
 			-webkit-line-clamp: 6;
 			max-height: 93px;
+		}
+	}
+
+	@include responsive(600px) {
+		.book {
+			height: 200px;
+		}
+		.book__cover {
+			width: 136px;
+		}
+
+		.book__info {
+			width: calc(100% - 136px);
+		}
+		.synopsis {
+			-webkit-line-clamp: 2;
+			max-height: 22px;
+		}
+		.add-cart {
+			padding: 5px 10px;
+			font-size: 11pt;
+		}
+	}
+
+	@include responsive(400px) {
+		.book {
+			height: 150px;
+		}
+		.book__cover {
+			width: 102px;
+		}
+		.book__info {
+			width: calc(100% - 102px);
+		}
+		.title {
+			font-size: 11pt;
+		}
+		.synopsis {
+			display: none;
 		}
 	}
 }
