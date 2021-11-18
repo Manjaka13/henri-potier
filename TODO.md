@@ -43,7 +43,7 @@
 [ ] Bug: Y-axis problem for book card list
 [ ] Unit testing on each component
 [ ] End to end testing
-[ ] Add better reusable SASS mixins
+[x] Add better reusable SASS mixins
 [ ] Edit readme to be best looking as possible
 [ ] Review overall code for performance
 [ ] Track warnings on final code

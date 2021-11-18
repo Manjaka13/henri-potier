@@ -3,8 +3,7 @@
 */
 
 .search {
-	display: flex;
-	align-items: center;
+	@include flexrow(initial, center);
 	margin-right: 20px;
 
 	&__input {

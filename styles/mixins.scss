@@ -1,0 +1,56 @@
+/*
+	Various usefull mixins
+*/
+
+// Responsiveness
+@mixin responsive($size) {
+	@media only screen and (max-width: $size) {
+		@content;
+	}
+}
+
+// Item transition
+@mixin transition($duration:0.2s) {
+	transition: all $duration ease-out;
+}
+
+/*
+    Flex alignment mixins
+*/
+
+// We gonna use flex alignment
+@mixin flexbox {
+	display: flex;
+}
+
+// Flex direction column
+@mixin flexcol($align-x: flex-start, $align-y: flex-start) {
+	@include flexbox;
+	flex-direction: column;
+	justify-content: $align-y;
+	align-items: $align-x;
+}
+
+// Flex direction column reverse
+@mixin flexcolreverse($align-x: flex-start, $align-y: flex-start) {
+	@include flexbox;
+	flex-direction: column-reverse;
+	justify-content: $align-y;
+	align-items: $align-x;
+}
+
+// Flex direction row
+@mixin flexrow($align-x: flex-start, $align-y: flex-start) {
+	@include flexbox;
+	flex-direction: row;
+	justify-content: $align-x;
+	align-items: $align-y;
+}
+
+// Flex direction row reverse
+@mixin flexrowreverse($align-x: flex-start, $align-y: flex-start) {
+	@include flexbox;
+	flex-direction: row-reverse;
+	justify-content: $align-x;
+	align-items: $align-y;
+}

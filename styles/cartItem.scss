@@ -3,12 +3,11 @@
 */
 
 .cart-item {
-	display: flex;
-	justify-content: space-between;
+	@include flexrow(space-between, initial);
 	width: 100%;
 	height: 100px;
 	cursor: pointer;
-	transition: all 0.2s ease-out;
+	@include transition;
 	margin: 10px 0 10px 0;
 
 	&:hover {
@@ -16,11 +15,11 @@
 	}
 
 	.about {
-		display: flex;
-		align-items: center;
+		@include flexrow(initial, center);
 	}
 
 	.cover {
+		width: 70px;
 		height: 100%;
 		margin-left: 10px;
 	}
@@ -47,8 +46,7 @@
 	}
 
 	.pricing {
-		display: flex;
-		align-items: center;
+		@include flexrow(initial, center);
 	}
 
 	.remove {
@@ -75,15 +73,12 @@
 	}
 
 	.reduction {
-		display: flex;
-		align-items: center;
+		@include flexrow(initial, center);
 		height: 100%;
 	}
 
 	.reduction-value {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flexrow(center, center);
 		width: 60px;
 		height: 60px;
 		background: green;

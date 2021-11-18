@@ -41,24 +41,19 @@ ul {
 
 a {
 	text-decoration: none;
-	transition: all 0.2s ease-out;
+	@include transition;
 }
 
 .container {
-	display: flex;
-	align-items: flex-start;
+	@include flexrow(initial, flex-start);
 	width: 1400px;
 	margin: auto;
-}
 
-@media only screen and (max-width: 1700px) {
-	.container {
+	@include responsive(1700px) {
 		width: 1000px;
 	}
-}
 
-@media only screen and (max-width: 1400px) {
-	.container {
+	@include responsive(1400px) {
 		width: 90%;
 	}
 }

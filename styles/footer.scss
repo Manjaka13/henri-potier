@@ -8,8 +8,7 @@
 	box-shadow: 0px 0px 10px rgb(100, 100, 100);
 
 	&__container {
-		display: flex;
-		justify-content: center;
+		@include flexrow(center, initial);
 	}
 
 	&__left,

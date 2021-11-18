@@ -3,8 +3,7 @@
 */
 
 .navigation {
-	display: flex;
-	justify-content: center;
+	@include flexrow(center, initial);
 	width: 100%;
 	height: 76px;
 	position: fixed;
@@ -15,13 +14,11 @@
 	box-shadow: 0px 0px 10px rgb(100, 100, 100);
 
 	&__container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include flexrow(space-between, center);
 	}
 
 	&__head {
-		display: flex;
+		@include flexbox;
 		.title {
 			color: white;
 			font-size: 25pt;
@@ -46,8 +43,7 @@
 	}
 
 	&__links {
-		display: flex;
-		align-items: center;
+		@include flexrow(initial, center);
 		.link {
 			display: block;
 			padding: 10px 20px 10px 20px;
@@ -60,7 +56,7 @@
 			height: 3px;
 			box-shadow: 0px 1px 3px black;
 			background: white;
-			transition: all 0.2s ease-out;
+			@include transition;
 			margin: auto;
 		}
 		.item {

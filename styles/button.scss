@@ -5,7 +5,7 @@
 .btn {
 	border: none;
 	outline: none;
-	transition: all 0.2s ease-out;
+	@include transition;
 	font-size: 12pt;
 	padding: 10px 20px;
 	cursor: pointer;

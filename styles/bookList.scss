@@ -6,9 +6,7 @@
 	min-height: calc(100vh - 37px);
 
 	.book-container {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
+		@include flexrow(space-between, flex-start);
 		flex-wrap: wrap;
 		padding-top: 20px;
 		margin-top: 76px;
@@ -19,7 +17,7 @@
 		width: calc(50% - 10px);
 	}
 
-	@media only screen and (max-width: 1200px) {
+	@include responsive(1200px) {
 		.book {
 			height: 200px;
 		}
@@ -38,9 +36,9 @@
 		}
 	}
 
-	@media only screen and (max-width: 900px) {
+	@include responsive(900px) {
 		.book-list {
-			flex-direction: column;
+			@include flexcol(space-between, flex-start);
 		}
 
 		.book {

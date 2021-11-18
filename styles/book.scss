@@ -3,15 +3,13 @@
 */
 
 .book {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
+	@include flexrow(flex-start, center);
 	width: 500px;
 	height: 280px;
 	overflow: hidden;
 	border-radius: 5px;
 	background: white;
-	transition: all 0.2s ease-out;
+	@include transition;
 	border: 1px rgb(182, 182, 182) solid;
 
 	&:hover {
@@ -32,31 +30,23 @@
 	// Book infos
 
 	&__info {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		@include flexcol(center);
 		width: calc(100% - 200px);
 		height: 100%;
 		.top {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
+			@include flexcol(space-between);
 			width: 100%;
 			min-height: 100px;
 		}
 		.box {
-			display: flex;
-			justify-content: space-between;
-			align-items: flex-start;
+			@include flexrow(space-between, flex-start);
 		}
 		.title {
 			padding: 10px;
 			font-size: 13pt;
 		}
 		.info {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			@include flexrow(center, center);
 			outline: none;
 			background: none;
 			width: 30px;
@@ -65,7 +55,7 @@
 			border: none;
 			margin: 10px 10px 0 0;
 			cursor: pointer;
-			transition: all 0.2s ease-out;
+			@include transition;
 			background: rgb(245, 245, 245);
 			font-size: 15pt;
 			color: $color-3;
