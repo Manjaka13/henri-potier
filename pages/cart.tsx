@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import Page from "components/Page";
 import CartList from "components/CartList";
@@ -15,13 +15,11 @@ const Cart = (): JSX.Element => {
 
 	// Back to home when cart empty
 	useEffect(() => {
-		if(cart.length <= 0)
-			Router.push("/");
-		else
-			setCanDisplay(true);
+		if (cart.length <= 0) Router.push("/");
+		else setCanDisplay(true);
 	}, []);
 
-	if(canDisplay)
+	if (canDisplay)
 		return (
 			<Page
 				title="Votre panier"
@@ -31,8 +29,7 @@ const Cart = (): JSX.Element => {
 				<CartList books={cart} />
 			</Page>
 		);
-	else
-		return null;
+	else return null;
 };
 
 export default Cart;
