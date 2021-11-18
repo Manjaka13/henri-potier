@@ -1,9 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import "styles/index.scss";
 import { IHenriPotierProps } from "helpers/interface";
-import {Provider} from "react-redux";
+import { Provider } from "react-redux";
 import store from "redux/store";
-
 
 const HenriPotier: React.FC<IHenriPotierProps> = ({
 	Component,

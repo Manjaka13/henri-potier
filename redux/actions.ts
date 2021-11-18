@@ -1,9 +1,5 @@
-import {IBook, IReduxAction} from "helpers/interface";
-import {
-	ADD_CART_ITEM,
-	REMOVE_CART_ITEM,
-	FLUSH_CART
-} from "./actionTypes";
+import { IBook, IReduxAction } from "helpers/interface";
+import { ADD_CART_ITEM, REMOVE_CART_ITEM, FLUSH_CART } from "./actionTypes";
 
 /*
 	Define actions to be dispatched here
@@ -11,14 +7,14 @@ import {
 
 export const addCartItem = (payload: IBook): IReduxAction => ({
 	type: ADD_CART_ITEM,
-	payload
+	payload,
 });
 
-export const removeCartItem = (isbn: string): IReduxAction => ({
+export const removeCartItem = (payload: IBook): IReduxAction => ({
 	type: REMOVE_CART_ITEM,
-	payload: isbn
+	payload,
 });
 
 export const flushCart = (): IReduxAction => ({
-	type: FLUSH_CART
+	type: FLUSH_CART,
 });

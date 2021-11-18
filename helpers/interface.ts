@@ -57,7 +57,7 @@ export interface ICartItemProps {
 // Book props
 export interface IBookProps {
 	book: IBook;
-	onAdd: unknown;
+	onAdd: React.MouseEventHandler;
 	existsInCart: boolean;
 }
 
@@ -70,4 +70,9 @@ export interface IBadge {
 export interface IReduxAction {
 	type: string;
 	payload?: IBook;
+}
+
+// Cart list props
+export interface ICartListProps {
+	books: Array<IBook>;
 }

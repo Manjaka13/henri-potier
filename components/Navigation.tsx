@@ -3,9 +3,9 @@ import Link from "next/link";
 import Search from "components/Search";
 import Badge from "components/Badge";
 import data from "public/data.json";
-import { INavigationProps } from "helpers/interface";
+import { INavigationProps, IBook } from "helpers/interface";
 import { v4 as uuidv4 } from "uuid";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
 /*
 	Navigation component
@@ -14,20 +14,23 @@ import {useSelector} from "react-redux";
 const Navigation: React.FC<INavigationProps> = ({
 	active = 0,
 }): JSX.Element => {
-	const cartItemsNumber = useSelector((list: Array<IBooks>) => list.length);
+	const cartItemsNumber = useSelector((list: Array<IBook>) => list.length);
 
 	// Map section links
-	const mappedSections = data.sections.map((item, key) => ((key != 1 || cartItemsNumber > 0) && (
-		<li className={`item ${key === active && "item--active"}`} key={uuidv4()}>
-			<Badge number={key === 1 ? cartItemsNumber : 0} />
-			<Link href={item.link} passHref>
-				<a className="link" title={item.title}>
-					{item.name}
-				</a>
-			</Link>
-			<div className="underline"></div>
-		</li>
-	)));
+	const mappedSections = data.sections.map(
+		(item, key) =>
+			(key != 1 || cartItemsNumber > 0) && (
+				<li className={`item ${key === active && "item--active"}`} key={uuidv4()}>
+					<Badge number={key === 1 ? cartItemsNumber : 0} />
+					<Link href={item.link} passHref>
+						<a className="link" title={item.title}>
+							{item.name}
+						</a>
+					</Link>
+					<div className="underline"></div>
+				</li>
+			)
+	);
 
 	return (
 		<nav className="navigation">

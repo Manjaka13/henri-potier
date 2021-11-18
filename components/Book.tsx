@@ -7,7 +7,11 @@ import { IBookProps } from "helpers/interface";
 	@book: book data to disply
 */
 
-const Book: React.FC<IBookProps> = ({ book, onAdd, existsInCart }): JSX.Element => (
+const Book: React.FC<IBookProps> = ({
+	book,
+	onAdd,
+	existsInCart,
+}): JSX.Element => (
 	<div className="book">
 		<figure className="book__cover">
 			<img className="image" src="cover.jpg" alt={`Cover ${book.title}`} />
@@ -27,11 +31,11 @@ const Book: React.FC<IBookProps> = ({ book, onAdd, existsInCart }): JSX.Element 
 				{book.synopsis[0]}
 			</p>
 			<button
-				className={`btn btn--${!existsInCart ? 'ok' : 'disabled'} add-cart`}
+				className={`btn btn--${!existsInCart ? "ok" : "disabled"} add-cart`}
 				title="Ajouter ce produit à votre panier"
 				onClick={onAdd}
 			>
-				{!existsInCart ? 'Ajouter au panier' : 'Ajouté'}
+				{!existsInCart ? "Ajouter au panier" : "Ajouté"}
 			</button>
 		</div>
 	</div>
