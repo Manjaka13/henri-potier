@@ -30,13 +30,13 @@
 [ ] Add image lazy loading
 [x] Setup axios and webservices
 [x] Design Redux store
-[ ] Feature add item to cart
-[ ] Feature remove item from cart
+[x] Feature add item to cart
+[x] Feature remove item from cart
 [x] Add badges number to navbar links
 [ ] Display full synopsis and book data on click to info button
-[ ] Create a hook for getting book list
+[x] Create a hook for getting book list
 [ ] Create a hook for getting book details in cart
-[ ] List cart items in cart page
+[x] List cart items in cart page
 [ ] Display cart total
 [ ] Add fake payment feature
 [x] Flush cart feature

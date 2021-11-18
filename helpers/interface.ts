@@ -52,6 +52,7 @@ export interface IBook {
 export interface ICartItemProps {
 	book: IBook;
 	id: number | string;
+	onRemove: React.MouseEventHandler;
 }
 
 // Book props

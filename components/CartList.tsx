@@ -4,7 +4,7 @@ import CartItem from "components/CartItem";
 import { v4 as uuidv4 } from "uuid";
 import { ICartListProps, IBook } from "helpers/interface";
 import { useDispatch } from "react-redux";
-import { flushCart } from "redux/actions";
+import { flushCart, removeCartItem } from "redux/actions";
 
 /*
 	Lists cart content
@@ -16,7 +16,14 @@ const CartList: React.FC<ICartListProps> = ({ books }): JSX.Element => {
 	// Map cart content list
 	const mappedCart: Array<JSX.Element> = books.map((item: IBook) => {
 		const key: string = uuidv4();
-		return <CartItem book={item} key={key} id={key} />;
+		return (
+			<CartItem
+				book={item}
+				key={key}
+				id={key}
+				onRemove={() => dispatch(removeCartItem(item))}
+			/>
+		);
 	});
 
 	return (

@@ -8,7 +8,7 @@ import { ICartItemProps } from "helpers/interface";
 	@book: the book object
 */
 
-const CartItem: React.FC<ICartItemProps> = ({ book, id }): JSX.Element => (
+const CartItem: React.FC<ICartItemProps> = ({ book, id, onRemove }): JSX.Element => (
 	<li className="cart-item">
 		<div className="about">
 			<figure className="cover">
@@ -29,7 +29,7 @@ const CartItem: React.FC<ICartItemProps> = ({ book, id }): JSX.Element => (
 				className="remove"
 				type="danger"
 				title="Enlever cet article du panier"
-				onClick={() => console.log(`Enlever item ${id}`)}
+				onClick={() => onRemove()}
 			>
 				Enlever
 			</Button>
