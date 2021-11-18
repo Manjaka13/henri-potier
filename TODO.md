@@ -53,3 +53,4 @@
 [ ] Fix cart item arragement list
 [x] Fix navbar z-index
 [x] Bug cart page not displaying
+[x] Redirect back to home when cart empty in cart page
