@@ -2,6 +2,8 @@
 	All typescript interfaces
 */
 
+import {IconProp} from '@fortawesome/fontawesome-svg-core';
+
 // App props
 export interface IHenriPotierProps {
 	Component: React.ComponentClass;
@@ -13,6 +15,7 @@ export interface IButtonProps {
 	className?: string;
 	type?: string;
 	title?: string;
+	icon?: IconProp;
 	children?: string;
 	onClick?: unknown;
 }

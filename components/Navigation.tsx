@@ -6,6 +6,12 @@ import data from "public/data.json";
 import { INavigationProps, IBook } from "helpers/interface";
 import { v4 as uuidv4 } from "uuid";
 import { useSelector } from "react-redux";
+import {FontAwesomeIcon as Icon} from "@fortawesome/react-fontawesome";
+import {library} from "@fortawesome/fontawesome-svg-core";
+import {faBook, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+
+// Load icons
+library.add(faBook, faShoppingCart);
 
 /*
 	Navigation component
@@ -24,7 +30,7 @@ const Navigation: React.FC<INavigationProps> = ({
 					<Badge number={key === 1 ? cartItemsNumber : 0} />
 					<Link href={item.link} passHref>
 						<a className="link" title={item.title}>
-							{item.name}
+							<Icon icon={key === 0 ? faBook : faShoppingCart} /> {item.name}
 						</a>
 					</Link>
 					<div className="underline"></div>

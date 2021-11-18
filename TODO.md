@@ -49,7 +49,7 @@
 [ ] Track warnings on final code
 [ ] Check if final code respects SOLID, KISS, YAGNI principles
 [ ] Add better comments
-[ ] Add fontawesome icons
+[x] Add fontawesome icons
 [ ] Fix cart item arragement list
 [x] Fix navbar z-index
 [x] Bug cart page not displaying

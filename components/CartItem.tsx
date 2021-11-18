@@ -1,6 +1,11 @@
 import React from "react";
 import Button from "components/Button";
 import { ICartItemProps } from "helpers/interface";
+import {library} from "@fortawesome/fontawesome-svg-core";
+import {faMinusCircle} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faMinusCircle);
+
 
 /*
 	CartItem component
@@ -29,7 +34,8 @@ const CartItem: React.FC<ICartItemProps> = ({ book, id, onRemove }): JSX.Element
 				className="remove"
 				type="danger"
 				title="Enlever cet article du panier"
-				onClick={() => onRemove()}
+				onClick={onRemove}
+				icon={faMinusCircle}
 			>
 				Enlever
 			</Button>

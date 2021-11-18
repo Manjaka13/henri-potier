@@ -54,22 +54,27 @@
 			font-size: 13pt;
 		}
 		.info {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			outline: none;
 			background: none;
 			width: 30px;
 			height: 30px;
 			border-radius: 50%;
-			border: 1px rgb(200, 200, 200) solid;
+			border: none;
 			margin: 10px 10px 0 0;
 			cursor: pointer;
 			transition: all 0.2s ease-out;
 			background: rgb(245, 245, 245);
+			font-size: 15pt;
+			color: $color-3;
 			&:hover {
-				background: rgb(67, 67, 255);
+				background: $color-3;
 				color: white;
 			}
 			&:active {
-				background: rgb(16, 16, 141);
+				background: black;
 				color: white;
 			}
 		}

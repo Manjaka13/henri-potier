@@ -1,5 +1,10 @@
 import React from "react";
 import { IBookProps } from "helpers/interface";
+import {FontAwesomeIcon as Icon} from "@fortawesome/react-fontawesome";
+import {library} from "@fortawesome/fontawesome-svg-core";
+import {faShoppingCart, faCheckCircle, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faShoppingCart, faCheckCircle, faInfoCircle);
 
 /*
 	Book component
@@ -21,7 +26,7 @@ const Book: React.FC<IBookProps> = ({
 				<div className="box">
 					<h2 className="title">{book.title}</h2>
 					<button className="info" title="Synopsis">
-						i
+						<Icon icon={faInfoCircle} />
 					</button>
 				</div>
 				<p className="price">{book.price} $</p>
@@ -35,7 +40,8 @@ const Book: React.FC<IBookProps> = ({
 				title="Ajouter ce produit à votre panier"
 				onClick={onAdd}
 			>
-				{!existsInCart ? "Ajouter au panier" : "Ajouté"}
+				{!existsInCart ? (<Icon icon={faShoppingCart} />) : <Icon icon={faCheckCircle} />}
+				{!existsInCart ? " Ajouter au panier" : " Ajouté"}
 			</button>
 		</div>
 	</div>
