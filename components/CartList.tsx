@@ -24,7 +24,6 @@ const CartList: React.FC<ICartListProps> = ({ books }): JSX.Element => {
 			<CartItem
 				book={item}
 				key={key}
-				id={key}
 				onRemove={() => dispatch(removeCartItem(item))}
 			/>
 		);
