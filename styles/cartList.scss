@@ -7,11 +7,20 @@
 	margin-top: 116px;
 	margin-bottom: 20px;
 
+	@include responsive(700px) {
+		margin-top: 20px;
+	}
+
 	&__container {
 		@include flexcol(flex-start, initial);
 		min-height: calc(100vh - 136px);
 		box-shadow: 0px 0px 10px rgb(180, 180, 180);
 		border-radius: 10px;
+		@include responsive(700px) {
+			width: 100%;
+			border-radius: 0;
+			box-shadow: none;
+		}
 	}
 
 	&__top {
@@ -45,6 +54,9 @@
 		text-align: right;
 		padding: 10px;
 		font-size: 20pt;
+		@include responsive(500px) {
+			font-size: 15pt;
+		}
 		.text {
 			text-decoration: underline;
 		}
@@ -54,6 +66,9 @@
 			font-size: 35pt;
 			color: green;
 			margin-left: 20px;
+			@include responsive(500px) {
+				font-size: 25pt;
+			}
 		}
 	}
 }

@@ -6,7 +6,6 @@
 	@include flexrow(space-between, initial);
 	width: 100%;
 	height: 100px;
-	cursor: pointer;
 	@include transition;
 	margin: 10px 0 10px 0;
 
@@ -73,6 +72,7 @@
 	}
 
 	.reduction {
+		margin-right: 10px;
 		@include flexrow(initial, center);
 		height: 100%;
 	}
@@ -86,5 +86,58 @@
 		border-radius: 50%;
 		transform: rotate(20deg);
 		font-size: 15pt;
+	}
+
+	@include responsive(910px) {
+		.name {
+			font-size: 11pt;
+		}
+		.label {
+			display: none;
+		}
+		.id {
+			margin: 0;
+			font-size: 10pt;
+		}
+	}
+
+	@include responsive(900px) {
+		.remove {
+			padding: 5px 10px;
+			font-size: 11pt;
+		}
+	}
+
+	@include responsive(800px) {
+		.reduction {
+			display: none;
+		}
+	}
+
+	@include responsive(700px) {
+		.name {
+			max-width: 160px;
+		}
+		.price {
+			display: none;
+		}
+		.real-price {
+			font-size: 15pt;
+		}
+		.remove {
+			&__text {
+				display: none;
+			}
+		}
+		.isbn {
+			display: none;
+		}
+	}
+
+	@include responsive(400px) {
+		.name {
+			max-width: 110px;
+			font-size: 9pt;
+		}
 	}
 }

@@ -24,14 +24,14 @@ const CartItem: React.FC<ICartItemProps> = ({
 			<div className="group">
 				<h3 className="name">{book.title}</h3>
 				<p className="isbn">
-					ISBN: <span className="id">{book.isbn}</span>
+					<span className="label">ISBN: </span><span className="id">{book.isbn}</span>
 				</p>
 			</div>
 		</div>
-		<div className="reduction">
-			<p className="reduction-value">- 5 $</p>
-		</div>
 		<div className="pricing">
+			<div className="reduction">
+				<p className="reduction-value">- 5 $</p>
+			</div>
 			<Button
 				className="remove"
 				type="danger"
@@ -39,7 +39,7 @@ const CartItem: React.FC<ICartItemProps> = ({
 				onClick={onRemove}
 				icon={faMinusCircle}
 			>
-				Enlever
+				<span className="remove__text">Enlever</span>
 			</Button>
 			<p className="price">{book.price} $</p>
 			<p className="real-price">30 $</p>

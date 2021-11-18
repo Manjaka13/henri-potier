@@ -34,7 +34,7 @@ const CartList: React.FC<ICartListProps> = ({ books }): JSX.Element => {
 			<div className="container cart__container">
 				{/*<!-- Shopping cart head -->*/}
 				<div className="cart__top">
-					<h2 className="title">Contenu de votre panier</h2>
+					<h2 className="title">Votre panier ({mappedCart.length})</h2>
 					<Button
 						className="flush"
 						type="danger"
