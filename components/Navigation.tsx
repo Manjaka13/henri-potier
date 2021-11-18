@@ -5,6 +5,7 @@ import Badge from "components/Badge";
 import data from "public/data.json";
 import { INavigationProps } from "helpers/interface";
 import { v4 as uuidv4 } from "uuid";
+import {useSelector} from "react-redux";
 
 /*
 	Navigation component
@@ -13,10 +14,12 @@ import { v4 as uuidv4 } from "uuid";
 const Navigation: React.FC<INavigationProps> = ({
 	active = 0,
 }): JSX.Element => {
+	const cartItemsNumber = useSelector((list: Array<IBooks>) => list.length);
+
 	// Map section links
-	const mappedSections = data.sections.map((item, key) => (
+	const mappedSections = data.sections.map((item, key) => ((key != 1 || cartItemsNumber > 0) && (
 		<li className={`item ${key === active && "item--active"}`} key={uuidv4()}>
-			<Badge number={key} />
+			<Badge number={key === 1 ? cartItemsNumber : 0} />
 			<Link href={item.link} passHref>
 				<a className="link" title={item.title}>
 					{item.name}
@@ -24,7 +27,7 @@ const Navigation: React.FC<INavigationProps> = ({
 			</Link>
 			<div className="underline"></div>
 		</li>
-	));
+	)));
 
 	return (
 		<nav className="navigation">
