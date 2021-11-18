@@ -9,6 +9,9 @@
 
 	&__container {
 		@include flexrow(center, initial);
+		@include responsive(600px) {
+			@include flexcol(center, initial);
+		}
 	}
 
 	&__left,

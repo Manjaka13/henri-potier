@@ -25,7 +25,7 @@
 [ ] Create mobile menu
 [ ] Adjust navbar responsive
 [ ] Adjust books/bookList responsive
-[ ] Add responsive to footer
+[x] Add responsive to footer
 [x] Add loading spinner component
 [ ] Add image lazy loading
 [x] Setup axios and webservices
