@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "components/Button";
 import CartItem from "components/CartItem";
-import books from "public/book-mocky.json";
 import { v4 as uuidv4 } from "uuid";
 import { IBook } from "helpers/interface";
 
@@ -9,7 +8,7 @@ import { IBook } from "helpers/interface";
 	Lists cart content
 */
 
-const CartList = (): JSX.Element => {
+const CartList: React.FC<Array<IBook>> = ({books}): JSX.Element => {
 	// Map cart content list
 	const mappedCart: Array<JSX.Element> = books.map((item: IBook) => {
 		const key: string = uuidv4();
