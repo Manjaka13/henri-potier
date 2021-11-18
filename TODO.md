@@ -22,8 +22,8 @@
 [x] Warning: rename  http-equiv to httpEquiv
 [x] Setup book interface on all components that uses books
 [ ] Search feature
-[ ] Create mobile menu
-[ ] Adjust navbar responsive
+[x] Create mobile menu
+[x] Adjust navbar responsive
 [ ] Adjust books/bookList responsive
 [x] Add responsive to footer
 [x] Add loading spinner component
@@ -50,7 +50,7 @@
 [ ] Check if final code respects SOLID, KISS, YAGNI principles
 [ ] Add better comments
 [x] Add fontawesome icons
-[ ] Fix cart item arragement list
+[x] Fix cart item arragement list
 [x] Fix navbar z-index
 [x] Bug cart page not displaying
 [x] Redirect back to home when cart empty in cart page

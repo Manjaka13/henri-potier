@@ -6,6 +6,10 @@
 	@include flexrow(initial, center);
 	margin-right: 20px;
 
+	@include responsive(1070px) {
+		display: none;
+	}
+
 	&__input {
 		border-radius: 5px 0 0 5px;
 		border: 1px white solid;
