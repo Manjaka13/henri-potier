@@ -29,7 +29,7 @@
 [x] Add loading spinner component
 [ ] Add image lazy loading
 [x] Setup axios and webservices
-[ ] Add Redux store
+[x] Design Redux store
 [ ] Feature add item to cart
 [ ] Feature remove item from cart
 [x] Add badges number to navbar links
