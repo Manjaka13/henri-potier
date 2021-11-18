@@ -5,7 +5,6 @@ import Search from "components/Search";
 const Menu: React.FC<IMenuProps> = ({ opened, requestClose, mappedSections }): JSX.Element => {
 	// Checks if we can close the menu
 	const checkClose = (e: React.MouseEvent) => {
-		console.log(e.currentTarget);
 		if(e.currentTarget.className != "search__input")
 			requestClose();
 	};

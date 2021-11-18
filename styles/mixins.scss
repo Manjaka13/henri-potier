@@ -10,7 +10,7 @@
 }
 
 // Item transition
-@mixin transition($duration:0.2s) {
+@mixin transition($duration: 0.2s) {
 	transition: all $duration ease-out;
 }
 
