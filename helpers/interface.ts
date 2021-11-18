@@ -57,9 +57,17 @@ export interface ICartItemProps {
 // Book props
 export interface IBookProps {
 	book: IBook;
+	onAdd: unknown;
+	existsInCart: boolean;
 }
 
 // Badge props
 export interface IBadge {
 	number?: number;
+}
+
+// Redux action
+export interface IReduxAction {
+	type: string;
+	payload?: IBook;
 }
