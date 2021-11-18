@@ -59,4 +59,20 @@
 	&--danger:active {
 		background: darken($color-4, 8%);
 	}
+
+	// Disabled button
+
+	&--disabled {
+		background: rgb(220, 220, 220);
+		pointer-events: none;
+		color: rgb(130, 130, 130);
+	}
+
+	&--disabled:hover {
+		background: lighten(rgb(220, 220, 220), 8%);
+	}
+
+	&--disabled:active {
+		background: darken(rgb(220, 220, 220), 8%);
+	}
 }
