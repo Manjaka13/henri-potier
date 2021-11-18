@@ -3,12 +3,16 @@ import Button from "components/Button";
 import CartItem from "components/CartItem";
 import { v4 as uuidv4 } from "uuid";
 import { ICartListProps, IBook } from "helpers/interface";
+import { useDispatch } from "react-redux";
+import { flushCart } from "redux/actions";
 
 /*
 	Lists cart content
 */
 
 const CartList: React.FC<ICartListProps> = ({ books }): JSX.Element => {
+	const dispatch = useDispatch();
+
 	// Map cart content list
 	const mappedCart: Array<JSX.Element> = books.map((item: IBook) => {
 		const key: string = uuidv4();
@@ -21,7 +25,12 @@ const CartList: React.FC<ICartListProps> = ({ books }): JSX.Element => {
 				{/*<!-- Shopping cart head -->*/}
 				<div className="cart__top">
 					<h2 className="title">Contenu de votre panier</h2>
-					<Button className="flush" type="danger" title="Vider le panier">
+					<Button
+						className="flush"
+						type="danger"
+						title="Vider le panier"
+						onClick={() => dispatch(flushCart())}
+					>
 						Vider
 					</Button>
 				</div>

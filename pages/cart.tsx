@@ -17,7 +17,7 @@ const Cart = (): JSX.Element => {
 	useEffect(() => {
 		if (cart.length <= 0) Router.push("/");
 		else setCanDisplay(true);
-	}, []);
+	}, [cart]);
 
 	if (canDisplay)
 		return (

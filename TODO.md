@@ -39,7 +39,7 @@
 [ ] List cart items in cart page
 [ ] Display cart total
 [ ] Add fake payment feature
-[ ] Flush cart feature
+[x] Flush cart feature
 [ ] Bug: Y-axis problem for book card list
 [ ] Unit testing on each component
 [ ] End to end testing
