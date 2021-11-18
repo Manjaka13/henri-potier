@@ -2,7 +2,7 @@
 	All typescript interfaces
 */
 
-import {IconProp} from '@fortawesome/fontawesome-svg-core';
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 // App props
 export interface IHenriPotierProps {
@@ -54,7 +54,6 @@ export interface IBook {
 // Cart item props interface
 export interface ICartItemProps {
 	book: IBook;
-	id: number | string;
 	onRemove: React.MouseEventHandler;
 }
 

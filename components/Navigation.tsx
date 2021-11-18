@@ -6,9 +6,9 @@ import data from "public/data.json";
 import { INavigationProps, IBook } from "helpers/interface";
 import { v4 as uuidv4 } from "uuid";
 import { useSelector } from "react-redux";
-import {FontAwesomeIcon as Icon} from "@fortawesome/react-fontawesome";
-import {library} from "@fortawesome/fontawesome-svg-core";
-import {faBook, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faBook, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 // Load icons
 library.add(faBook, faShoppingCart);

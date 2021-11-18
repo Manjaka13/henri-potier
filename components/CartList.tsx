@@ -5,8 +5,8 @@ import { v4 as uuidv4 } from "uuid";
 import { ICartListProps, IBook } from "helpers/interface";
 import { useDispatch } from "react-redux";
 import { flushCart, removeCartItem } from "redux/actions";
-import {library} from "@fortawesome/fontawesome-svg-core";
-import {faTrash} from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faTrash);
 

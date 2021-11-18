@@ -1,11 +1,10 @@
 import React from "react";
 import Button from "components/Button";
 import { ICartItemProps } from "helpers/interface";
-import {library} from "@fortawesome/fontawesome-svg-core";
-import {faMinusCircle} from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faMinusCircle);
-
 
 /*
 	CartItem component
@@ -13,7 +12,10 @@ library.add(faMinusCircle);
 	@book: the book object
 */
 
-const CartItem: React.FC<ICartItemProps> = ({ book, id, onRemove }): JSX.Element => (
+const CartItem: React.FC<ICartItemProps> = ({
+	book,
+	onRemove,
+}): JSX.Element => (
 	<li className="cart-item">
 		<div className="about">
 			<figure className="cover">

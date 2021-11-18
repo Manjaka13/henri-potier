@@ -1,6 +1,6 @@
 import React from "react";
 import { IButtonProps } from "helpers/interface";
-import {FontAwesomeIcon as Icon} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 
 /*
 	Button component
@@ -26,7 +26,7 @@ const Button: React.FC<IButtonProps> = ({
 			typeof onClick === "function" ? onClick() : null;
 		}}
 	>
-		{icon && (<Icon icon={icon} />)} {children}
+		{icon && <Icon icon={icon} />} {children}
 	</button>
 );
 

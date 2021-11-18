@@ -1,8 +1,12 @@
 import React from "react";
 import { IBookProps } from "helpers/interface";
-import {FontAwesomeIcon as Icon} from "@fortawesome/react-fontawesome";
-import {library} from "@fortawesome/fontawesome-svg-core";
-import {faShoppingCart, faCheckCircle, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+	faShoppingCart,
+	faCheckCircle,
+	faInfoCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 library.add(faShoppingCart, faCheckCircle, faInfoCircle);
 
@@ -40,7 +44,11 @@ const Book: React.FC<IBookProps> = ({
 				title="Ajouter ce produit à votre panier"
 				onClick={onAdd}
 			>
-				{!existsInCart ? (<Icon icon={faShoppingCart} />) : <Icon icon={faCheckCircle} />}
+				{!existsInCart ? (
+					<Icon icon={faShoppingCart} />
+				) : (
+					<Icon icon={faCheckCircle} />
+				)}
 				{!existsInCart ? " Ajouter au panier" : " Ajouté"}
 			</button>
 		</div>

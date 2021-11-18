@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "components/Button";
-import {library} from "@fortawesome/fontawesome-svg-core";
-import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faSearch);
 
@@ -16,11 +16,7 @@ const Search = (): JSX.Element => (
 			type="search"
 			placeholder="Je recherche..."
 		/>
-		<Button
-			className="search__submit"
-			type="ok"
-			icon={faSearch}
-		>
+		<Button className="search__submit" type="ok" icon={faSearch}>
 			Rechercher
 		</Button>
 	</form>

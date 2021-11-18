@@ -1,8 +1,8 @@
 import React from "react";
 import data from "public/data.json";
-import {FontAwesomeIcon as Icon} from "@fortawesome/react-fontawesome";
-import {library} from "@fortawesome/fontawesome-svg-core";
-import {faHeart} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faHeart);
 
