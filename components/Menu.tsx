@@ -8,8 +8,8 @@ const Menu: React.FC<IMenuProps> = ({
 	mappedSections,
 }): JSX.Element => {
 	// Checks if we can close the menu
-	const checkClose = (e: React.MouseEvent) => {
-		if (e.currentTarget.className != "search__input") requestClose();
+	const checkClose = (e) => {
+		if (e.target.className != "search__input") requestClose();
 	};
 
 	return (

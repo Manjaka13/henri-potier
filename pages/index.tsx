@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Page from "components/Page";
 import Book from "components/Book";
 import Spinner from "components/Spinner";
@@ -15,7 +15,7 @@ import { addCartItem } from "redux/actions";
 */
 
 const Home = (): JSX.Element => {
-	const [currentSynopsis, setCurrentSynopsis] = useState<number|null>(0);
+	const [currentSynopsis, setCurrentSynopsis] = useState<number | null>(null);
 	const books = useBooks();
 	const cartIsbn = useSelector((list: Array<IBook>) =>
 		list.map((item) => item.isbn)
@@ -29,15 +29,17 @@ const Home = (): JSX.Element => {
 			: false;
 
 	// Map book list
-	const mappedBooks: Array<JSX.Element> = books.map((item: IBook, key: number) => (
-		<Book
-			book={item}
-			key={uuidv4()}
-			onAdd={() => dispatch(addCartItem(item))}
-			existsInCart={existsInCart(item)}
-			onInfo={() => setCurrentSynopsis(key)}
-		/>
-	));
+	const mappedBooks: Array<JSX.Element> = books.map(
+		(item: IBook, key: number) => (
+			<Book
+				book={item}
+				key={uuidv4()}
+				onAdd={() => dispatch(addCartItem(item))}
+				existsInCart={existsInCart(item)}
+				onInfo={() => setCurrentSynopsis(key)}
+			/>
+		)
+	);
 
 	// Closes synopsis modal
 	const closeSynopsis = () => setCurrentSynopsis(null);

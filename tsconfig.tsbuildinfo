@@ -702,7 +702,7 @@
         "affectsGlobalScope": false
       },
       "./helpers/interface.ts": {
-        "version": "99ff0489b7bfdf725b6e30a7aff2f93d86fa0631546aa8b6d95f5cb0739d96cd",
+        "version": "3d8c52eb34252ca756d1c501a5003dfe5ba6fcb57080771a589ff08e8b7b3ae7",
         "signature": "68e98fcadfe30bb85b70c583412a9a86ce5fa350d37b3c1053835d1fd913db5d",
         "affectsGlobalScope": false
       },
@@ -777,7 +777,7 @@
         "affectsGlobalScope": false
       },
       "./components/book.tsx": {
-        "version": "256b12970aa2c78556d189359b4fe194d9d9ad90525c1f8b18b613afa6d33a90",
+        "version": "fede944a24b4ce301886ca239fbcd50ee397922213260d6d1ae7f8c455fd1774",
         "signature": "4b1cf66d5e93929526ebb0e1e911a1f8a184af192b5db8fe823fc5e0bcca04c9",
         "affectsGlobalScope": false
       },
@@ -837,7 +837,7 @@
         "affectsGlobalScope": false
       },
       "./components/menu.tsx": {
-        "version": "70814f3f199f46ac5e07ae40f93fe2ff1e397fffdacd919697069e4c2797857c",
+        "version": "093327c7faad55d7e56b4260029d55cc74f2a4ffada2732638a2b3055259e9ff",
         "signature": "27f52a8910565a35c4bb447c665847532ea91b02f85cbfa896f516ba0232c92a",
         "affectsGlobalScope": false
       },
@@ -862,7 +862,7 @@
         "affectsGlobalScope": false
       },
       "./components/synopsis.tsx": {
-        "version": "e72bdda4cdcf3fae37f7e2d8e2fd36acaafe286988d9d66fde0787675cb5b9dd",
+        "version": "5788732fa7d715be9aeaa58b715406e68f9841d168424180ca839f6bd37351bb",
         "signature": "5f68e7e6d06f80be4ac40bdf71ef5c88a75be5820226854a5e65f71d21f4a61d",
         "affectsGlobalScope": false
       },
@@ -882,7 +882,7 @@
         "affectsGlobalScope": false
       },
       "./pages/index.tsx": {
-        "version": "a4cb0662e9d7fe7b44cff174cccef488c34704c972885c04cb44aafc7bd64d9a",
+        "version": "9c352d932964ea282eba2efbdffc310f7ac327a2544f6d7f0f1d60be357f4815",
         "signature": "baab083620bbfc8608ec128c4ed344342c8ebeb5bedd331f12bc23af11cac922",
         "affectsGlobalScope": false
       },

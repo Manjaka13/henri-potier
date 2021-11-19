@@ -20,7 +20,7 @@ const Book: React.FC<IBookProps> = ({
 	book,
 	onAdd,
 	existsInCart,
-	onInfo
+	onInfo,
 }): JSX.Element => (
 	<div className="book">
 		<figure className="book__cover">
