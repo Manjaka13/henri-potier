@@ -4,7 +4,7 @@ import {
 	REMOVE_CART_ITEM,
 	FLUSH_CART,
 	REQUEST_SEARCH,
-	FLUSH_SEARCH
+	FLUSH_SEARCH,
 } from "./actionTypes";
 
 /*

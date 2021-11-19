@@ -23,7 +23,9 @@ const Synopsis: React.FC<ISynopsisProps> = ({
 		));
 
 	return (
-		<div className={`full-synopsis ${book && opened ? "full-synopsis--shown" : ""}`}>
+		<div
+			className={`full-synopsis ${book && opened ? "full-synopsis--shown" : ""}`}
+		>
 			{book && (
 				<div className="full-synopsis__window">
 					<div className="head">

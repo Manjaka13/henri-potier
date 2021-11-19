@@ -39,8 +39,11 @@ const Home = (): JSX.Element => {
 			: false;
 
 	// Map book list
-	const mappedBooks: Array<JSX.Element> = books.filter((item: IBook) => search.length > 0 ? item.title.match(searchRegex) : true).map(
-		(item: IBook, key: number) => (
+	const mappedBooks: Array<JSX.Element> = books
+		.filter((item: IBook) =>
+			search.length > 0 ? item.title.match(searchRegex) : true
+		)
+		.map((item: IBook, key: number) => (
 			<Book
 				book={item}
 				key={uuidv4()}
@@ -48,8 +51,7 @@ const Home = (): JSX.Element => {
 				existsInCart={existsInCart(item)}
 				onInfo={() => setCurrentSynopsis(key)}
 			/>
-		)
-	);
+		));
 
 	// Closes synopsis modal
 	const closeSynopsis = () => setCurrentSynopsis(null);
@@ -67,20 +69,40 @@ const Home = (): JSX.Element => {
 				{search.length > 0 && mappedBooks.length > 0 && (
 					<>
 						<div className="book-list__result">
-							<p className="caption">Résultat de la recherche ({mappedBooks.length})</p>
-							<Button type="ok" onClick={resetSearch} icon={faList}>Liste complète</Button>
+							<p className="caption">
+								Résultat de la recherche ({mappedBooks.length})
+							</p>
+							<Button type="ok" onClick={resetSearch} icon={faList}>
+								Liste complète
+							</Button>
 						</div>
 						<div className="book-list__separator"></div>
 					</>
 				)}
-				<div className={`book-container ${search.length > 0 && mappedBooks.length > 0 ? 'book-container--search' : ''}`}>
-					{books.length > 0 ? mappedBooks.length > 0 ? mappedBooks
-						: (<div className="book-empty">
+				<div
+					className={`book-container ${
+						search.length > 0 && mappedBooks.length > 0
+							? "book-container--search"
+							: ""
+					}`}
+				>
+					{books.length > 0 ? (
+						mappedBooks.length > 0 ? (
+							mappedBooks
+						) : (
+							<div className="book-empty">
 								<Icon className="icon" icon={faExclamationCircle} />
 								<p className="empty">Aucun livre ne correspond à votre recherche</p>
-								<Button type="ok" onClick={resetSearch}>D&apos;accord</Button>
-							</div>)
-					: (<div className="loading-box"><Spinner /></div>)}
+								<Button type="ok" onClick={resetSearch}>
+									D&apos;accord
+								</Button>
+							</div>
+						)
+					) : (
+						<div className="loading-box">
+							<Spinner />
+						</div>
+					)}
 				</div>
 				<Synopsis
 					book={books[currentSynopsis]}

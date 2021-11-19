@@ -1,7 +1,7 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import Button from "components/Button";
-import {requestSearch} from "redux/actions";
-import {useDispatch} from "react-redux";
+import { requestSearch } from "redux/actions";
+import { useDispatch } from "react-redux";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
@@ -39,7 +39,7 @@ const Search = (): JSX.Element => {
 				icon={faSearch}
 			/>
 		</form>
-		);
-}
+	);
+};
 
 export default Search;
