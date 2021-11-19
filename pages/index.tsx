@@ -63,6 +63,7 @@ const Home = (): JSX.Element => {
 		<Page
 			title="Les livres d'Henri Potier"
 			description="Parcourez la liste des livres d'Henri Potier à prix abordables."
+			image="cover.png"
 			active={0}
 		>
 			<div className="container book-list">
