@@ -37,9 +37,9 @@
 [x] Create a hook for getting book list
 [x] Create a hook for getting book details in cart
 [x] List cart items in cart page
-[ ] Display cart total
+[x] Display cart total
 [x] Flush cart feature
-[ ] Bug: Y-axis problem for book card list
+[x] Bug: Y-axis problem for book card list
 [ ] Unit testing on each component
 [ ] End to end testing
 [x] Add better reusable SASS mixins
