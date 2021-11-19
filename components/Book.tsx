@@ -20,6 +20,7 @@ const Book: React.FC<IBookProps> = ({
 	book,
 	onAdd,
 	existsInCart,
+	onInfo
 }): JSX.Element => (
 	<div className="book">
 		<figure className="book__cover">
@@ -29,7 +30,7 @@ const Book: React.FC<IBookProps> = ({
 			<div className="top">
 				<div className="box">
 					<h2 className="title">{book.title}</h2>
-					<button className="info" title="Synopsis">
+					<button className="info" title="Synopsis" onClick={onInfo}>
 						<Icon icon={faInfoCircle} />
 					</button>
 				</div>

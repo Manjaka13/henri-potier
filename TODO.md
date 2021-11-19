@@ -33,7 +33,7 @@
 [x] Feature add item to cart
 [x] Feature remove item from cart
 [x] Add badges number to navbar links
-[ ] Display full synopsis and book data on click to info button
+[x] Display full synopsis and book data on click to info button
 [x] Create a hook for getting book list
 [x] Create a hook for getting book details in cart
 [x] List cart items in cart page

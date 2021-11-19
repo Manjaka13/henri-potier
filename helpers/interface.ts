@@ -62,6 +62,7 @@ export interface IBookProps {
 	book: IBook;
 	onAdd: React.MouseEventHandler;
 	existsInCart: boolean;
+	onInfo: React.MouseEventHandler;
 }
 
 // Badge props
@@ -92,4 +93,11 @@ export interface IBookOffer {
 	type: string;
 	value: number;
 	sliceValue?: number;
+}
+
+// Synopsis modal props
+export interface ISynopsisProps {
+	book?: IBook;
+	opened: boolean;
+	onClose: unknown;
 }

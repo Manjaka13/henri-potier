@@ -1,0 +1,56 @@
+/*
+	Synopsis modal
+*/
+
+.full-synopsis {
+	@include flexrow(center, center);
+	position: fixed;
+	top: 76px;
+	left: 0;
+	z-index: 9;
+	width: 100%;
+	height: calc(100vh - 76px);
+	background: rgba(0, 0, 0, 0.6);
+	opacity: 0;
+	pointer-events: none;
+	@include transition;
+
+	&--shown {
+		opacity: 1;
+		pointer-events: auto;	
+	}
+
+	&__window {
+		width: 700px;
+		max-height: 70%;
+		overflow: auto;
+		background: white;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+		border-radius: 10px;
+	}
+
+	.head {
+		@include flexrow(space-between, center);
+	}
+
+	.title {
+		padding: 10px 20px;
+	}
+
+	.close {
+		margin-right: 20px;
+	}
+
+	.separator {
+		width: calc(100% - 40px);
+		height: 3px;
+		margin: auto;
+		background: rgb(200, 200, 200);
+		font-size: 20pt;
+	}
+
+	.prg {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
