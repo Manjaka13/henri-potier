@@ -58,3 +58,4 @@
 [x] Show loading spinner for waiting
 [x] Fix Menu z-index
 [x] Display real data in cart
+[x] Bug nav links cursor pointer showing outside of Link element

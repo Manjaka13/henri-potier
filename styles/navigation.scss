@@ -72,7 +72,6 @@
 		}
 		.item {
 			position: relative;
-			cursor: pointer;
 			@include responsive(1070px) {
 				display: none;
 			}
