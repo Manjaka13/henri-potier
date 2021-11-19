@@ -24,7 +24,8 @@ const CartItem: React.FC<ICartItemProps> = ({
 			<div className="group">
 				<h3 className="name">{book.title}</h3>
 				<p className="isbn">
-					<span className="label">ISBN: </span><span className="id">{book.isbn}</span>
+					<span className="label">ISBN: </span>
+					<span className="id">{book.isbn}</span>
 				</p>
 			</div>
 		</div>

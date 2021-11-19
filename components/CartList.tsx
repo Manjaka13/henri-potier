@@ -9,7 +9,7 @@ import { flushCart, removeCartItem } from "redux/actions";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import useBookDetails from "hooks/useBookDetails";
-import {resolveOffer, getCartTotal} from "helpers/utils";
+import { resolveOffer, getCartTotal } from "helpers/utils";
 
 library.add(faTrash);
 
@@ -44,10 +44,15 @@ const CartList: React.FC<ICartListProps> = ({ books }): JSX.Element => {
 				<div className="cart__top">
 					<div className="head-group">
 						<h2 className="title">Votre panier ({mappedCart.length})</h2>
-						{bestOffer &&
-						(<div className="reduction">
-							{cartPrice > 0 && (<p className="reduction-value">- {(cartTotal - cartPrice).toFixed(2)} €</p>)}
-						</div>)}
+						{bestOffer && (
+							<div className="reduction">
+								{cartPrice > 0 && (
+									<p className="reduction-value">
+										- {(cartTotal - cartPrice).toFixed(2)} €
+									</p>
+								)}
+							</div>
+						)}
 					</div>
 					<Button
 						className="flush"
@@ -65,11 +70,13 @@ const CartList: React.FC<ICartListProps> = ({ books }): JSX.Element => {
 
 				{/*<!-- Total due -->*/}
 				<div className="cart__separator"></div>
-				{bestOffer && (<p className="cart__total">
-					<span className="text">Net à payer:</span>{" "}
-					<span className="normal-price">{cartTotal} €</span>{" "}
-					<span className="price">{cartPrice.toFixed(2)} €</span>
-				</p>)}
+				{bestOffer && (
+					<p className="cart__total">
+						<span className="text">Net à payer:</span>{" "}
+						<span className="normal-price">{cartTotal} €</span>{" "}
+						<span className="price">{cartPrice.toFixed(2)} €</span>
+					</p>
+				)}
 				{!bestOffer && (
 					<div className="loading">
 						<Spinner />

@@ -44,11 +44,7 @@ const Home = (): JSX.Element => {
 		>
 			<div className="container book-list">
 				<div className="book-container">
-					{
-						books.length > 0 ?
-						mappedBooks :
-						(<Spinner />)
-					}
+					{books.length > 0 ? mappedBooks : <Spinner />}
 				</div>
 			</div>
 		</Page>
