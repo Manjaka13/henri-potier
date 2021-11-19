@@ -7,9 +7,9 @@
 	margin-top: 116px;
 	margin-bottom: 20px;
 
-	@include responsive(700px) {
-		margin-top: 20px;
-	}
+	// @include responsive(700px) {
+	// 	margin-top: 20px;
+	// }
 
 	&__container {
 		@include flexcol(flex-start, initial);
@@ -65,10 +65,52 @@
 			color: black;
 			font-size: 35pt;
 			color: green;
-			margin-left: 20px;
+			margin-left: 10px;
 			@include responsive(500px) {
 				font-size: 25pt;
 			}
+		}
+	}
+
+	.head-group {
+		@include flexrow(initial, center);
+	}
+
+	.reduction {
+		margin-right: 10px;
+		@include flexrow(initial, center);
+		height: 100%;
+	}
+
+	.reduction-value {
+		@include flexrow(center, center);
+		width: 50px;
+		height: 50px;
+		background: green;
+		color: white;
+		border-radius: 50%;
+		transform: rotate(20deg);
+		font-size: 9pt;
+	}
+
+	.loading {
+		@include flexrow(flex-end, initial);
+		width: 100%;
+	}
+
+	.normal-price {
+		margin-left: 10px;
+		color: rgb(130, 130, 130);
+		text-decoration: line-through;
+	}
+
+	.spinner {
+		width: 60px;
+		height: 60px;
+
+		div {
+			width: 44px;
+			height: 44px;
 		}
 	}
 }

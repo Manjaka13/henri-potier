@@ -19,7 +19,7 @@ const CartItem: React.FC<ICartItemProps> = ({
 	<li className="cart-item">
 		<div className="about">
 			<figure className="cover">
-				<img className="image" src="cover.jpg" alt="Cover Henri Potier" />
+				<img className="image" src={book.cover} alt="Cover Henri Potier" />
 			</figure>
 			<div className="group">
 				<h3 className="name">{book.title}</h3>
@@ -29,9 +29,9 @@ const CartItem: React.FC<ICartItemProps> = ({
 			</div>
 		</div>
 		<div className="pricing">
-			<div className="reduction">
-				<p className="reduction-value">- 5 $</p>
-			</div>
+			{/*<div className="reduction">
+				<p className="reduction-value">- 5 €</p>
+			</div>*/}
 			<Button
 				className="remove"
 				type="danger"
@@ -39,10 +39,10 @@ const CartItem: React.FC<ICartItemProps> = ({
 				onClick={onRemove}
 				icon={faMinusCircle}
 			>
-				<span className="remove__text">Enlever</span>
+				Enlever
 			</Button>
-			<p className="price">{book.price} $</p>
-			<p className="real-price">30 $</p>
+			{/*<p className="price">{book.price} $</p>*/}
+			<p className="real-price">{book.price} €</p>
 		</div>
 	</li>
 );

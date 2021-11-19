@@ -86,3 +86,10 @@ export interface IMenuProps {
 	requestClose: () => void;
 	mappedSections: Array<JSX.Element>;
 }
+
+// For book offers
+export interface IBookOffer {
+	type: string;
+	value: number;
+	sliceValue?: number;
+}

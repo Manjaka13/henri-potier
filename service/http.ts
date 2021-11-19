@@ -11,7 +11,7 @@ const headers = {
 function get(slug?: string): Promise<unknown> {
 	return new Promise<unknown>((resolve, reject) => {
 		axios
-			.get(`${config.baseUrl}/${slug || ""}`, {
+			.get(`${config.baseUrl}/${slug ? slug + "/commercialOffers" : ""}`, {
 				headers,
 			})
 			.then(({ data }) => resolve(data))

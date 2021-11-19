@@ -29,11 +29,9 @@ const Navigation: React.FC<INavigationProps> = ({
 	const [menuOpened, setMenuOpened] = useState<boolean>(false);
 
 	// Toggles menu status
-	const toggleMenu = () => {
-		console.log("Toggle: ", !menuOpened);
-		setMenuOpened(!menuOpened);
-	};
+	const toggleMenu = () => setMenuOpened(!menuOpened);
 
+	// Closes menu
 	const closeMenu = () => setMenuOpened(!menuOpened);
 
 	// Map section links

@@ -57,3 +57,4 @@
 [x] Cart responsive
 [x] Show loading spinner for waiting
 [x] Fix Menu z-index
+[x] Display real data in cart

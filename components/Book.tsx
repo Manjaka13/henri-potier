@@ -33,7 +33,7 @@ const Book: React.FC<IBookProps> = ({
 						<Icon icon={faInfoCircle} />
 					</button>
 				</div>
-				<p className="price">{book.price} $</p>
+				<p className="price">{book.price} €</p>
 				<div className="separator"></div>
 			</div>
 			<p className="prg synopsis" title={book.synopsis[0]}>
