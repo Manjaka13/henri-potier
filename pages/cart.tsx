@@ -3,7 +3,7 @@ import Router from "next/router";
 import Page from "components/Page";
 import CartList from "components/CartList";
 import { useSelector } from "react-redux";
-import { IBook } from "helpers/interface";
+import { IStore } from "helpers/interface";
 
 /*
 	Cart page
@@ -11,7 +11,7 @@ import { IBook } from "helpers/interface";
 
 const Cart = (): JSX.Element => {
 	const [canDisplay, setCanDisplay] = useState<boolean>(false);
-	const cart = useSelector((list: Array<IBook>) => list);
+	const cart = useSelector((store: IStore) => store.books);
 
 	// Back to home when cart empty
 	useEffect(() => {

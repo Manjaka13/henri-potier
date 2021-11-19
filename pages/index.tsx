@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import Page from "components/Page";
 import Book from "components/Book";
+import Button from "components/Button";
 import Spinner from "components/Spinner";
 import Synopsis from "components/Synopsis";
 // import books from "public/book-mocky.json";
 import { v4 as uuidv4 } from "uuid";
-import { IBook } from "helpers/interface";
+import { IStore, IBook } from "helpers/interface";
 import useBooks from "hooks/useBooks";
 import { useSelector, useDispatch } from "react-redux";
-import { addCartItem } from "redux/actions";
+import { addCartItem, flushSearch } from "redux/actions";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faExclamationCircle, faList } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faExclamationCircle, faList);
 
 /*
 	Home page
@@ -17,10 +23,14 @@ import { addCartItem } from "redux/actions";
 const Home = (): JSX.Element => {
 	const [currentSynopsis, setCurrentSynopsis] = useState<number | null>(null);
 	const books = useBooks();
-	const cartIsbn = useSelector((list: Array<IBook>) =>
-		list.map((item) => item.isbn)
+	const cartIsbn = useSelector((store: IStore) =>
+		store.books.map((item) => item.isbn)
 	);
+	const search = useSelector((store: IStore) => store.search);
+	const searchRegex = new RegExp(search, "gi");
 	const dispatch = useDispatch();
+
+	console.log(search);
 
 	// Checks if the passed book is already inside cart
 	const existsInCart = (currentBook: IBook): boolean =>
@@ -29,7 +39,7 @@ const Home = (): JSX.Element => {
 			: false;
 
 	// Map book list
-	const mappedBooks: Array<JSX.Element> = books.map(
+	const mappedBooks: Array<JSX.Element> = books.filter((item: IBook) => search.length > 0 ? item.title.match(searchRegex) : true).map(
 		(item: IBook, key: number) => (
 			<Book
 				book={item}
@@ -44,6 +54,9 @@ const Home = (): JSX.Element => {
 	// Closes synopsis modal
 	const closeSynopsis = () => setCurrentSynopsis(null);
 
+	// Resets search
+	const resetSearch = () => dispatch(flushSearch());
+
 	return (
 		<Page
 			title="Les livres d'Henri Potier"
@@ -51,8 +64,23 @@ const Home = (): JSX.Element => {
 			active={0}
 		>
 			<div className="container book-list">
-				<div className="book-container">
-					{books.length > 0 ? mappedBooks : <Spinner />}
+				{search.length > 0 && mappedBooks.length > 0 && (
+					<>
+						<div className="book-list__result">
+							<p className="caption">Résultat de la recherche ({mappedBooks.length})</p>
+							<Button type="ok" onClick={resetSearch} icon={faList}>Liste complète</Button>
+						</div>
+						<div className="book-list__separator"></div>
+					</>
+				)}
+				<div className={`book-container ${search.length > 0 && mappedBooks.length > 0 ? 'book-container--search' : ''}`}>
+					{books.length > 0 ? mappedBooks.length > 0 ? mappedBooks
+						: (<div className="book-empty">
+								<Icon className="icon" icon={faExclamationCircle} />
+								<p className="empty">Aucun livre ne correspond à votre recherche</p>
+								<Button type="ok" onClick={resetSearch}>D&apos;accord</Button>
+							</div>)
+					: (<div className="loading-box"><Spinner /></div>)}
 				</div>
 				<Synopsis
 					book={books[currentSynopsis]}

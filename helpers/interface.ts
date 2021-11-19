@@ -70,10 +70,16 @@ export interface IBadge {
 	number?: number;
 }
 
-// Redux action
-export interface IReduxAction {
+// Redux cart action
+export interface ICartAction {
 	type: string;
 	payload?: IBook;
+}
+
+// Redux search action
+export interface ISearchAction {
+	type: string;
+	payload?: string;
 }
 
 // Cart list props
@@ -100,4 +106,10 @@ export interface ISynopsisProps {
 	book?: IBook;
 	opened: boolean;
 	onClose: unknown;
+}
+
+// Store
+export interface IStore {
+	books: Array<IBook>;
+	search: string;
 }

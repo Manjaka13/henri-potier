@@ -21,7 +21,7 @@
 [x] Create page layout component
 [x] Warning: rename  http-equiv to httpEquiv
 [x] Setup book interface on all components that uses books
-[ ] Search feature
+[x] Search feature
 [x] Create mobile menu
 [x] Adjust navbar responsive
 [x] Adjust books/bookList responsive

@@ -4,7 +4,7 @@ import Search from "components/Search";
 import Badge from "components/Badge";
 import Menu from "components/Menu";
 import data from "public/data.json";
-import { INavigationProps, IBook } from "helpers/interface";
+import { INavigationProps, IStore } from "helpers/interface";
 import { v4 as uuidv4 } from "uuid";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
@@ -25,7 +25,7 @@ library.add(faBook, faShoppingCart, faBars);
 const Navigation: React.FC<INavigationProps> = ({
 	active = 0,
 }): JSX.Element => {
-	const cartItemsNumber = useSelector((list: Array<IBook>) => list.length);
+	const cartItemsNumber = useSelector((store: IStore) => store.books.length);
 	const [menuOpened, setMenuOpened] = useState<boolean>(false);
 
 	// Toggles menu status

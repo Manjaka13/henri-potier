@@ -3,19 +3,66 @@
 */
 
 .book-list {
-	@include flexrow(center, center);
+	@include flexcol(center, initial);
 	min-height: calc(100vh - 37px);
 
 	.book-container {
+		width: 100%;
+		min-height: calc(100vh - 37px);
 		@include flexrow(space-between, flex-start);
 		flex-wrap: wrap;
 		padding-top: 20px;
 		margin-top: 76px;
+		&--search {
+			margin-top: 0;
+		}
+	}
+
+	&__result {
+		@include flexrow(space-between, center);
+		width: 100%;
+		padding-top: 20px;
+		margin-top: 76px;
+		.caption {
+			font-size: 15pt;
+			text-decoration: underline;
+		}
+	}
+
+	&__separator {
+		width: 100%;
+		height: 3px;
+		background: rgb(200, 200, 200);
+		margin-top: 20px;
+	}
+
+	.loading-box {
+		@include flexrow(center, center);
+		width: 100%;
+		min-height: calc(100vh - 37px);
 	}
 
 	.book {
 		margin-bottom: 20px;
 		width: calc(50% - 10px);
+	}
+
+	.book-empty {
+		@include flexcol(center, center);
+		width: 100%;
+		min-height: calc(100vh - 37px);
+	}
+
+	.empty {
+		color: rgb(120, 120, 120);
+		font-size: 15pt;
+		padding: 20px;
+		text-align: center;
+	}
+
+	.icon {
+		color: rgb(120, 120, 120);
+		font-size: 40pt;
 	}
 
 	@include responsive(1200px) {
