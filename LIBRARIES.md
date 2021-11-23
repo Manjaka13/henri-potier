@@ -33,3 +33,8 @@ Why: Avoid prettier and eslint conflicts
 ## husky
 
 Why: To hook git pre-commit and execute validations (typescript, eslint, prettier)
+
+## redux,react-redux
+
+Why: To manage app states between components
+
