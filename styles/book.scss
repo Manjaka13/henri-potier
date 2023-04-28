@@ -22,7 +22,10 @@
 		width: 200px;
 		height: 100%;
 		overflow: hidden;
+		background: rgb(230, 230, 230);
+
 		.image {
+			width: 100%;
 			height: 100%;
 		}
 	}
@@ -33,20 +36,25 @@
 		@include flexcol(center);
 		width: calc(100% - 200px);
 		height: 100%;
+		padding: 10px;
+
 		.top {
 			@include flexcol(space-between);
 			width: 100%;
-			min-height: 100px;
+			// min-height: 100px;
 		}
+
 		.box {
-			@include flexrow(space-between, flex-start);
+			@include flexrow(space-between, center);
 		}
+
 		.title {
-			padding: 10px;
-			font-size: 13pt;
+			// padding: 10px;
+			font-size: 17px;
 		}
+
 		.info {
-			@include flexrow(center, center);
+			@include flexrow(initial, initial);
 			outline: none;
 			background: none;
 			width: 30px;
@@ -59,37 +67,46 @@
 			background: rgb(245, 245, 245);
 			font-size: 15pt;
 			color: $color-3;
+
 			&:hover {
 				background: $color-3;
 				color: white;
 			}
+
 			&:active {
 				background: black;
 				color: white;
 			}
 		}
+
 		.price {
 			color: rgb(130, 130, 130);
-			padding: 0 10px 0 10px;
-			font-size: 14pt;
+			// padding: 0 10px 0 10px;
+			font-size: 17px;
 			font-weight: bold;
 		}
+
 		.separator {
-			width: calc(100% - 20px);
+			width: 100%;
 			height: 2px;
 			background: rgb(180, 180, 180);
-			margin: 10px 0 0 10px;
+			// margin: 10px 0 0 10px;
+			margin: 10px 0 10px 0;
 		}
+
 		.synopsis {
 			overflow: hidden;
 			text-overflow: ellipsis;
 			display: -webkit-box;
 			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 6;
-			max-height: 93px;
+			-webkit-line-clamp: 5;
+			// max-height: 93px;
+			padding: 0;
 		}
+
 		.add-cart {
 			margin-top: 10px;
+			font-size: 17px;
 		}
 	}
 }

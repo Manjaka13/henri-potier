@@ -2,6 +2,11 @@
     Global styles
 */
 
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
 html,
 body {
 	font-family: sans-serif;
@@ -32,7 +37,7 @@ a,
 button,
 li,
 input {
-	font-size: 11pt;
+	font-size: 17px;
 }
 
 ul {
@@ -42,6 +47,7 @@ ul {
 a {
 	text-decoration: none;
 	@include transition;
+	font-size: 17px;
 }
 
 .container {

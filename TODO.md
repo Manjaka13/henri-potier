@@ -59,3 +59,7 @@
 [x] Fix Menu z-index
 [x] Display real data in cart
 [x] Bug nav links cursor pointer showing outside of Link element
+[ ] Increase font size
+[ ] Adjust responsive
+[ ] Bug: image disapears everytime hit add to cart
+[ ] Fix info button (border-radius)
